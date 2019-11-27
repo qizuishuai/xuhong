@@ -1,0 +1,21 @@
+server:
+  #端口号
+  port: 8080
+  servlet:
+      #项目路径访问
+      context-path: /xuhong
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost:3306/xuhong?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowMultiQueries=true
+
+#配置日志级别
+#logging:
+#  level:
+#    com.example.plus.mapper : debug
+#mybatis plusxml路径配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.jdgl.xuhong.entity
