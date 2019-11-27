@@ -1,19 +1,17 @@
 package com.jdgl.xuhong.entity;
 
-import javax.persistence.*;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.util.Date;
-@Entity
-@Table(name="guanli")
+@TableName(value = "guanli")
 public class GuanLi {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int ID;
     private String LeiXing;
     private String WeiZhi;
     private String ZhuangTai;
     private String YuanGongID;
-    private Date RuZhuShiJian;
-    private Date TuiFangShiJian;
+    private String RuZhuShiJian;
+    private String TuiFangShiJian;
     private String ShiFouSunHuai;
     private int Text1;
     private String Text2;
@@ -22,19 +20,7 @@ public class GuanLi {
     public GuanLi() {
     }
 
-    public GuanLi(int ID, String leiXing, String weiZhi, String zhuangTai, String yuanGongID, Date ruZhuShiJian, Date tuiFangShiJian, String shiFouSunHuai, int text1, String text2, String text3) {
-        this.ID = ID;
-        LeiXing = leiXing;
-        WeiZhi = weiZhi;
-        ZhuangTai = zhuangTai;
-        YuanGongID = yuanGongID;
-        RuZhuShiJian = ruZhuShiJian;
-        TuiFangShiJian = tuiFangShiJian;
-        ShiFouSunHuai = shiFouSunHuai;
-        Text1 = text1;
-        Text2 = text2;
-        Text3 = text3;
-    }
+
 
     public int getID() {
         return ID;
@@ -76,19 +62,19 @@ public class GuanLi {
         YuanGongID = yuanGongID;
     }
 
-    public Date getRuZhuShiJian() {
+    public String getRuZhuShiJian() {
         return RuZhuShiJian;
     }
 
-    public void setRuZhuShiJian(Date ruZhuShiJian) {
+    public void setRuZhuShiJian(String ruZhuShiJian) {
         RuZhuShiJian = ruZhuShiJian;
     }
 
-    public Date getTuiFangShiJian() {
+    public String getTuiFangShiJian() {
         return TuiFangShiJian;
     }
 
-    public void setTuiFangShiJian(Date tuiFangShiJian) {
+    public void setTuiFangShiJian(String tuiFangShiJian) {
         TuiFangShiJian = tuiFangShiJian;
     }
 

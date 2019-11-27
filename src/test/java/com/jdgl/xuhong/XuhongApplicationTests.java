@@ -1,6 +1,6 @@
 package com.jdgl.xuhong;
 
-import com.jdgl.xuhong.dao.StudentDao;
+import com.jdgl.xuhong.dao.StudentMapper;
 import com.jdgl.xuhong.entity.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +13,13 @@ import java.util.List;
 class XuhongApplicationTests {
 
 	@Autowired
-	private StudentDao studentDao;
+	private StudentMapper studentMapper;
 
 
 
 	@Test
 	void selsctgetall() {
-		List<Student> s=studentDao.getAll();
+		List<Student> s= studentMapper.getAll();
 		System.out.println(s);
 	}
 

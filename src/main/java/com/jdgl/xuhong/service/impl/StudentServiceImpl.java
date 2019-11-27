@@ -1,6 +1,6 @@
 package com.jdgl.xuhong.service.impl;
 
-import com.jdgl.xuhong.dao.StudentDao;
+import com.jdgl.xuhong.dao.StudentMapper;
 import com.jdgl.xuhong.entity.Student;
 import com.jdgl.xuhong.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +12,10 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
-    private StudentDao studentDao;
+    private StudentMapper studentMapper;
 
     @Override
     public List<Student> getAll() {
-        return studentDao.getAll();
+        return studentMapper.getAll();
     }
 }

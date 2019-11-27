@@ -1,21 +1,19 @@
 package com.jdgl.xuhong.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import org.springframework.data.repository.cdi.Eager;
 
-import javax.persistence.*;
 import java.util.Date;
-@Entity
-@Table(name="fuwu")
+
+@TableName(value = "fuwu")
 public class FuWu {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int ZhengJianID;
     private String ZhengJianLeiXing;
     private String XingMing;
     private String XingBie;
     private String DianHua;
     private int YuanGongID;
-    private Date ShiJian;
+    private String ShiJian;
     private String FangShi;
     private String PingJia;
 
@@ -23,20 +21,7 @@ public class FuWu {
     private String Text2;
     private String Text3;
 
-    public FuWu(int zhengJianID, String zhengJianLeiXing, String xingMing, String xingBie, String dianHua, int yuanGongID, Date shiJian, String fangShi, String pingJia, int text1, String text2, String text3) {
-        ZhengJianID = zhengJianID;
-        ZhengJianLeiXing = zhengJianLeiXing;
-        XingMing = xingMing;
-        XingBie = xingBie;
-        DianHua = dianHua;
-        YuanGongID = yuanGongID;
-        ShiJian = shiJian;
-        FangShi = fangShi;
-        PingJia = pingJia;
-        Text1 = text1;
-        Text2 = text2;
-        Text3 = text3;
-    }
+
 
     public FuWu() {
     }
@@ -107,11 +92,11 @@ public class FuWu {
         YuanGongID = yuanGongID;
     }
 
-    public Date getShiJian() {
+    public String getShiJian() {
         return ShiJian;
     }
 
-    public void setShiJian(Date shiJian) {
+    public void setShiJian(String shiJian) {
         ShiJian = shiJian;
     }
 

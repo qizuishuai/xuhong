@@ -1,12 +1,12 @@
 package com.jdgl.xuhong.entity;
 
-import javax.persistence.*;
+import com.baomidou.mybatisplus.annotation.TableName;
 
-@Entity
-@Table(name="bumen")
+
+
+@TableName(value = "bumen")
 public class BuMen {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
     private int BuMenID;
     private String BuMenMingCheng;
     private String BuMenRenShu;

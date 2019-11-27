@@ -1,16 +1,15 @@
 package com.jdgl.xuhong.entity;
 
-import javax.persistence.*;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.util.Date;
-@Entity
-@Table(name="yuding")
+
+@TableName(value = "yuding")
 public class YuDing {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int ID;
     private String ZhengJianID;
     private int YuanGongID;
-    private Date ShiJian;
+    private String ShiJian;
     private int ShuLiang;
     private String JiaGe;
     private int Text1;
@@ -20,17 +19,7 @@ public class YuDing {
     public YuDing() {
     }
 
-    public YuDing(int ID, String zhengJianID, int yuanGongID, Date shiJian, int shuLiang, String jiaGe, int text1, String text2, String text3) {
-        this.ID = ID;
-        ZhengJianID = zhengJianID;
-        YuanGongID = yuanGongID;
-        ShiJian = shiJian;
-        ShuLiang = shuLiang;
-        JiaGe = jiaGe;
-        Text1 = text1;
-        Text2 = text2;
-        Text3 = text3;
-    }
+
 
     public int getID() {
         return ID;
@@ -56,11 +45,11 @@ public class YuDing {
         YuanGongID = yuanGongID;
     }
 
-    public Date getShiJian() {
+    public String getShiJian() {
         return ShiJian;
     }
 
-    public void setShiJian(Date shiJian) {
+    public void setShiJian(String shiJian) {
         ShiJian = shiJian;
     }
 
